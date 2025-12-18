@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'RodinProDB';
+  src: url('./FOT-Rodin Pro DB.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'RodinProDB', sans-serif;
+}
+
