@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Weather from "./Home";
-import Main from "./Weather"
+import Main from "./Weather";
 
 export default function App() {
   return (

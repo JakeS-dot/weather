@@ -11,7 +11,7 @@ export default function Weather() {
     function updateScale() {
       const baseWidth = 950;
       const baseHeight = 500;
-      const scaleX = (window.innerWidth * 0.98) / baseWidth;
+      const scaleX = window.innerWidth / baseWidth;
       const scaleY = (window.innerHeight * 0.98) / baseHeight;
       const newScale = Math.min(scaleX, scaleY);
       setScale(newScale);
@@ -25,10 +25,7 @@ export default function Weather() {
   return (
     <div className="black-box">
       <div className="inner-box-wrapper">
-        <div
-          className="inner-box"
-          style={{ transform: `scale(${scale})` }}
-        >
+        <div className="inner-box" style={{ transform: `scale(${scale})` }}>
           {/* your full inner-box content here */}
           <div className="top-bar">
             <div className="logo">
@@ -60,16 +57,24 @@ export default function Weather() {
                   "Loading..."
                 )}
               </div>
-              <div id="conditions">{weather ? weather.condition : "Loading..."}</div>
+              <div id="conditions">
+                {weather ? weather.condition : "Loading..."}
+              </div>
             </div>
             <div className="forecast-image">
-              {weather ? <img src={`${weather.image}`} alt="Weather" /> : "Loading..."}
+              {weather ? (
+                <img src={`${weather.image}`} alt="Weather" />
+              ) : (
+                "Loading..."
+              )}
             </div>
           </div>
 
           <div className="forecast-footer">
             <div className="support">supported by weathernews</div>
-            <div className="time">{weather ? weather.timestamp : "Loading..."}</div>
+            <div className="time">
+              {weather ? weather.timestamp : "Loading..."}
+            </div>
           </div>
 
           <div className="start-buttons-box">
@@ -90,10 +95,8 @@ export default function Weather() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   );
 }
-
