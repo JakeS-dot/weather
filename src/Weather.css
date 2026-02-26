@@ -1,3 +1,13 @@
+.forecast-bar {
+  height: 13vh;
+  padding-top: 5px;
+}
+.current {
+  font-size: 3.5em;
+}
+#location-inner {
+  font-size: 3em;
+}
 .black-box {
   background-color: black;
   height: 100vh;
@@ -19,23 +29,56 @@ main {
     rgba(0, 124, 214, 1) 35%,
     rgba(2, 0, 171, 1) 75%
   );
-  width: 100vw;
-  height: 52%;
+  width:calc(100vw - 30px);
+  height: 73%;
+  margin-left: 25px;
+  margin-right: 25px;
 }
-
+.top-nav {
+  flex: 0 0 12%;
+}
 nav {
-  background-color: red;
-  height: 9.5%;
+  display: flex;
+  background-color: #e6e6e6;
+  height: 13%;
   width: 100vw;
+  width:calc(100vw - 30px);
+}
+nav > div {
+  flex: 1;
+
+ /* actual borders */
+border-bottom: 3px solid white; /* keep bottom if you want */
+  /* remove left border */
+  border-right: 6px solid white;
+
+  /* black overlay on left */
+  box-shadow: -3px 0 0 0 #6f6f6f,
+    2px 0 4px -2px rgba(0,0,0,0.5);  /* right soft gradient */
+}
+.blank {
+  border-left: none;
+  box-shadow:     2px 0 4px -3px rgba(0,0,0,0.5);
+
+}
+.settings {
+  border-right: none;
+}
+.upper-time {
+  padding: 42px;
+}
+#temp {
+  font-size: 7em;
 }
 .forecast-info {
+  gap: 50px;
   width: 100%;
 }
 .forecast-bar {
   margin-top: 5px;
 }
 .bottom-nav {
-  margin-top: -0.5%;
+margin-top: 5px;
 }
 .forecast-image {
   width: 100%;
@@ -51,7 +94,6 @@ nav {
   align-items: center;
   height: 100%;
   width: 30%;
-
 
 }
 

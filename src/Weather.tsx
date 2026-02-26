@@ -8,9 +8,9 @@ export default function Main() {
     <>
       <div className="black-box">
         <nav className="top-nav">
-          <div className="blank"></div>
-          <div className="upper-time"></div>
-          <div className="settings"></div>
+          <div className="blank">1</div>
+          <div className="upper-time">2</div>
+          <div className="settings">3</div>
         </nav>
         <main>
           <div className="forecast-bar">
@@ -45,7 +45,7 @@ export default function Main() {
                 )}
               </div>
               <div className="winds">
-<p>SW 3 mph</p>
+                <p>SW 3 mph</p>
               </div>
             </div>
           </div>
