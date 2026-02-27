@@ -45,7 +45,7 @@ export default function Main() {
                 )}
               </div>
               <div className="winds">
-                <p>SW 3 mph</p>
+                <p>NSW 3 mph</p>
               </div>
             </div>
           </div>

@@ -1,24 +1,26 @@
 .forecast-bar {
   height: 13vh;
-  padding-top: 5px;
+  padding-top: 5px;  
+  border-bottom: 4px solid #0200ab;
+
 }
 .current {
   font-size: 3.5em;
 }
 #location-inner {
   font-size: 3em;
+  width: 90%; 
 }
 .black-box {
   background-color: black;
   height: 100vh;
   width: 100vw;
-  position: fixed; /* always stays in place */
-  top: 0; /* stick to top */
-  left: 0; /* stick to left */
+  padding: 0 30px;   /* 👈 creates the side margins */
+  box-sizing: border-box; /* prevents overflow */
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* ensures overlap */
   flex-direction: column;
 }
 main {
@@ -36,6 +38,10 @@ main {
 }
 .top-nav {
   flex: 0 0 12%;
+}
+.support {
+    text-shadow: 2px 2px #333333;
+
 }
 nav {
   display: flex;
@@ -85,7 +91,7 @@ margin-top: 5px;
   margin-left: -100%;
 }
 .forecast-container {
-  height: 76%;
+  height: 77%;
 }
 .img-container {
   display: flex;
@@ -93,24 +99,28 @@ margin-top: 5px;
   justify-content: end;
   align-items: center;
   height: 100%;
-  width: 30%;
+  width: 17%;
+  margin-right: 8.5vw;
+  margin-top: -5vh;
 
 }
-
 .winds {
-  background-color: black;
+
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Fades to white at the bottom */
   width: 50vw;
-  height: 10%;
+  height: 13%;
   display: flex;
   align-items: center;
+  margin-bottom: -9px;
   justify-content: center;
+  margin-right: 216px !important;
 }
 
 .winds p {
-  font-size: 24px;
+  font-size: 2.5em;
   margin: 0;
-  margin-left: 25%;
 }
 .forecast-footer {
-  height: 5%;
+  margin-top: -25px;
+  height: 6%;
 }

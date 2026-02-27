@@ -32,7 +32,7 @@ const PLACEHOLDER_WEATHER: WeatherData = {
   temperature: 99,
   condition: "Unavailable",
   image: "/assets/icons/Clear Day (Sunny).png",
-  timestamp: "Weather data unavailable",
+  timestamp: "As of 9:00 a.m., 06/25",
   city: "Unknown Location",
 };
 
@@ -144,34 +144,34 @@ export const useWeather = (): WeatherData | null => {
         const temperature = Math.round((tempC * 9) / 5 + 32);
 
         const weatherMap: Record<number, { condition: string; image: string }> =
-          {
-            0: { condition: "Clear", image: "Clear Day (Sunny).png" },
-            1: { condition: "Mainly Clear", image: "Mostly Cloudy Day.png" },
-            2: { condition: "Partly Cloudy", image: "Partly Cloudy Day.png" },
-            3: { condition: "Overcast/Rain", image: "Rain.png" },
-            45: { condition: "Fog", image: "Fog, Mist.png" },
-            48: { condition: "Depositing Rime Fog", image: "Fog, Mist.png" },
-            51: { condition: "Drizzle Light", image: "Rain.png" },
-            53: { condition: "Drizzle Moderate", image: "Rain.png" },
-            55: { condition: "Drizzle Dense", image: "Rain.png" },
-            61: { condition: "Rain Slight", image: "Rain.png" },
-            63: { condition: "Rain Moderate", image: "Rain.png" },
-            65: { condition: "Rain Heavy", image: "Rain.png" },
-            71: { condition: "Snow Slight", image: "Snow.png" },
-            73: { condition: "Snow Moderate", image: "Snow.png" },
-            75: { condition: "Snow Heavy", image: "Snow.png" },
-            80: { condition: "Rain Showers", image: "Rain.png" },
-            81: { condition: "Rain Showers Moderate", image: "Rain.png" },
-            82: { condition: "Rain Showers Violent", image: "Rain.png" },
-            95: {
-              condition: "Thunderstorm",
-              image: "Thunderbolt-Lightning.png",
-            },
-            99: {
-              condition: "Thunderstorm Hail",
-              image: "Thunderbolt-Lightning.png",
-            },
-          };
+        {
+          0: { condition: "Clear", image: "Clear Day (Sunny).png" },
+          1: { condition: "Mainly Clear", image: "Mostly Cloudy Day.png" },
+          2: { condition: "Partly Cloudy", image: "Partly Cloudy Day.png" },
+          3: { condition: "Overcast/Rain", image: "Rain.png" },
+          45: { condition: "Fog", image: "Fog, Mist.png" },
+          48: { condition: "Depositing Rime Fog", image: "Fog, Mist.png" },
+          51: { condition: "Drizzle Light", image: "Rain.png" },
+          53: { condition: "Drizzle Moderate", image: "Rain.png" },
+          55: { condition: "Drizzle Dense", image: "Rain.png" },
+          61: { condition: "Rain Slight", image: "Rain.png" },
+          63: { condition: "Rain Moderate", image: "Rain.png" },
+          65: { condition: "Rain Heavy", image: "Rain.png" },
+          71: { condition: "Snow Slight", image: "Snow.png" },
+          73: { condition: "Snow Moderate", image: "Snow.png" },
+          75: { condition: "Snow Heavy", image: "Snow.png" },
+          80: { condition: "Rain Showers", image: "Rain.png" },
+          81: { condition: "Rain Showers Moderate", image: "Rain.png" },
+          82: { condition: "Rain Showers Violent", image: "Rain.png" },
+          95: {
+            condition: "Thunderstorm",
+            image: "Thunderbolt-Lightning.png",
+          },
+          99: {
+            condition: "Thunderstorm Hail",
+            image: "Thunderbolt-Lightning.png",
+          },
+        };
 
         const { condition, image } = weatherMap[weathercode] || {
           condition: "Unknown",
